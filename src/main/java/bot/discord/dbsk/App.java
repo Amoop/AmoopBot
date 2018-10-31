@@ -74,7 +74,7 @@ public class App
         }
         if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
             for (int i=0; i<5; i++){
-                discord.sendMessage("@224675715612672001");
+                discord.sendMessage("<@!224675715612672001>");
             }
         }
         
