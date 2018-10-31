@@ -72,6 +72,11 @@ public class App
                 discord.sendMessage("My name jeff");
             }
         }
+        if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
+            for (int i=0; i<5; i++){
+                discord.sendMessage("@224675715612672001");
+            }
+        }
         
     }
     
