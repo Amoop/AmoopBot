@@ -80,7 +80,6 @@ public class App
         
         else if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
             discord.sendMessage("Pong");
-            }
         }
         
         
