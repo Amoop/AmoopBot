@@ -72,11 +72,21 @@ public class App
                 discord.sendMessage("My name jeff");
             }
         }
-        if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
+        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "mention")){
             for (int i=0; i<5; i++){
                 discord.sendMessage("<@!224675715612672001>");
             }
         }
+        
+        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
+            discord.sendMessage("Pong");
+            }
+        }
+        
+        
+        
+        
+        
         
     }
     
