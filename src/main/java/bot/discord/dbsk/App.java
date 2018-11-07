@@ -84,6 +84,12 @@ public class App
         
         
         
+        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "wumpus")){
+            discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png");
+        }
+        
+        
+        
         
         
         
