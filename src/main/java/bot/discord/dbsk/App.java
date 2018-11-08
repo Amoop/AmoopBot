@@ -67,19 +67,34 @@ public class App
         Message objMsg= evt.getMessage();
         MessageChannel objMagCh = evt.getChannel();
         
-        if (objMsg.getContentRaw().equals(Constants.PREFIX + "repeat")){
+        if(objMsg.getContentRaw().startsWith(Constants.PREFIX)){
+            return;
+        }
+        
+        String command=objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
+        String input=objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
+        
+        
+        if (command.equals("repeat")){
             for (int i=0; i<5; i++){
-                discord.sendMessage("My name jeff");
+                discord.sendMessage("urmom");
             }
         }
-        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "mention")){
+        else if (command.equals("mention")){
             for (int i=0; i<5; i++){
                 discord.sendMessage("<@!224675715612672001>");
             }
         }
         
-        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
+        else if (command.equals("ping")){
             discord.sendMessage("Pong");
+        }
+        else if (command.equals("spongebob")){
+            String output=("");
+            for (int k=0; k<input.length(); k++){
+                output+=input.substring(k,k+1) + (" ");
+                discord.sendMessage(output);
+            }
         }
         
         
