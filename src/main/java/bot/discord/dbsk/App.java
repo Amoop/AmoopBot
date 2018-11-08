@@ -71,7 +71,12 @@ public class App
             return;
         }
         
-        String command=objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
+        String command = objMsg.getContentRaw().substring(1);
+        try{
+                objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
+        }catch(Exception e){
+            
+        }
         String input=objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
         
         
