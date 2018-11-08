@@ -73,12 +73,16 @@ public class App
         
         String command = objMsg.getContentRaw().substring(1);
         try{
-                objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
+                command = objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
         }catch(Exception e){
             
         }
-        String input=objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
-        
+        String input="";
+        try{
+               input = objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
+        }catch(Exception e){
+            
+        }
         
         if (command.equals("repeat")){
             for (int i=0; i<5; i++){
