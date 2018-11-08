@@ -65,9 +65,9 @@ public class App
     	//When a message is sent, this method will be called.
     	//evt contains all the information you need about the message.
         Message objMsg= evt.getMessage();
-        MessageChannel objMagCh = evt.getChannel();
+        MessageChannel objMsgCh = evt.getChannel();
         
-        if(objMsg.getContentRaw().startsWith(Constants.PREFIX)){
+        if(!objMsg.getContentRaw().startsWith(Constants.PREFIX)){
             return;
         }
         
