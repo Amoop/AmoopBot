@@ -105,7 +105,15 @@ public class App
                 discord.sendMessage(output);
             }
         }
-        
+        else if (command.equals("is aaron big gay")==true){
+            int l=(int)(Math.random()*2)+1;
+            if (l==1){
+                discord.sendMessage("yes he big gay");
+            }
+            else if (l==2){
+                discord.sendMessage("you rolled a 2 but he still big gay");
+            }
+        }
         
         
         else if (objMsg.getContentRaw().equals(Constants.PREFIX + "wumpus")){
