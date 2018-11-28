@@ -1,5 +1,8 @@
 package bot.discord.dbsk;
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import bot.discord.api.API;
 import discord.Constants;
 import discord.Discord;
 import discord.Music;
@@ -105,7 +108,7 @@ public class App
                 discord.sendMessage(output);
             }
         }
-        else if (command.equals("is aaron big gay")==true){
+        else if (command.equals("isaaronbiggay")){
             int l=(int)(Math.random()*2)+1;
             if (l==1){
                 discord.sendMessage("yes he big gay");
@@ -114,7 +117,18 @@ public class App
                 discord.sendMessage("you rolled a 2 but he still big gay");
             }
         }
-        
+        else if (command.equals("news")){
+            String json="";
+            try{
+                API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=063311d067b34060a96ba7536e2a6251");
+            }catch(Exception e){
+                
+            }
+            JsonObject news = new JsonParser().parse(json).getAsJsonObject();
+            String url = news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+            discord.sendMessage(url);
+            
+        }
         
         else if (objMsg.getContentRaw().equals(Constants.PREFIX + "wumpus")){
             discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png");
