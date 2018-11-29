@@ -122,7 +122,7 @@ public class App
             try{
                 API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=063311d067b34060a96ba7536e2a6251");
             }catch(Exception e){
-                
+                e.printStackTrace();
             }
             System.out.println(json);
             JsonObject news = new JsonParser().parse(json).getAsJsonObject();
