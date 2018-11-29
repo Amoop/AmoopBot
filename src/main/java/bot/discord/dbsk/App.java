@@ -124,6 +124,7 @@ public class App
             }catch(Exception e){
                 
             }
+            System.out.println(json);
             JsonObject news = new JsonParser().parse(json).getAsJsonObject();
             String url = news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
             discord.sendMessage(url);
