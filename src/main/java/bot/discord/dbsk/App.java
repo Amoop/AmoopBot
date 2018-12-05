@@ -2,6 +2,8 @@ package bot.discord.dbsk;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import discord.*;
+import bot.discord.api.*;
 import bot.discord.api.API;
 import discord.Constants;
 import discord.Discord;
