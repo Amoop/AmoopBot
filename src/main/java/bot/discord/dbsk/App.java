@@ -95,14 +95,22 @@ public class App
             
         }
         
-        else if (objMsg.getContentRaw().equals(Constants.PREFIX + "wumpus")){
+        else if (command.equals("wumpus")){
             discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png");
         }
         
         
+        else if (command.equals("join")){
+            Music.joinChannel(493168112338862082L);
+        }
         
+        else if (command.equals("play")){
+            Music.play(input);
+        }
         
-        
+        else if (command.equals("leave")){
+            Music.exitChannel();
+        }
         
     }
     
