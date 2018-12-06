@@ -106,7 +106,7 @@ public class App
         
         else if (command.equals("play")){
             System.out.println(input);
-            Music.play(input);
+            Music.play("https://www.youtube.com/watch?v=y6120QOlsfU");
         }
         
         else if (command.equals("leave")){
