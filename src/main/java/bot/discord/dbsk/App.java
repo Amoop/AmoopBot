@@ -84,15 +84,13 @@ public class App
             }
         }
         else if (command.equals("news")){
-            String json="";
+            String json = "";
             try{
-                API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=063311d067b34060a96ba7536e2a6251");
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-            System.out.println(json);
-            JsonObject news = new JsonParser().parse(json).getAsJsonObject();
-            String url = news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+                json = API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=d84cd61388cb4e949872d398e65fe20a");
+            }catch(Exception e){}
+            JsonObject News = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
+            
+            String url = News.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
             discord.sendMessage(url);
             
         }
