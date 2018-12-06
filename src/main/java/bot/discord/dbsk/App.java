@@ -105,6 +105,7 @@ public class App
         }
         
         else if (command.equals("play")){
+            System.out.println(input);
             Music.play(input);
         }
         
