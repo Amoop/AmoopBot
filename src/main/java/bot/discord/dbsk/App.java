@@ -113,6 +113,16 @@ public class App
             Music.exitChannel();
         }
         
+        else if (command.equals("flip")){
+            int flip=(int)(Math.random()*2)+1;
+            if (flip==1){
+                discord.sendMessage("Heads :Andy:");
+            }
+            else if (flip==2){
+                discord.sendMessage("Tails");
+            }
+        }
+        
     }
     
     public static void emojiEvent(MessageReactionAddEvent evt) {
