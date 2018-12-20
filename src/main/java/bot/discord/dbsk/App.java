@@ -130,22 +130,23 @@ public class App
     
     public static void nepu(){
         discord.sendMessage("<@!259191629049626634>");
-        discord.sendMessage("```````.---......``..-----:/+ssyyyyyss+/:-::-------:::----------.``...\n" +
-"```````.---......``..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.``...\n" +
-"```````.---......`-odNNNNmmmNNNNNNNNmmNNNmmdNNdNh//+/-----------.``...\n" +
-"```````.---...../yNNNNNdmNNNNNmNNNMMmNdNMNmhmMMNNNMmds----------.``...\n" +
-"```````.---...-smdmNdmmdNNNNNNmNMNNNmNNhmmmMmdNMMMNMNds---------.``...\n" +
-"```````.---.-/hNNdMMmmddNNNNmmdmNmNNmNNdhdhmNNNmNNmmNho+--------.``..-\n" +
-"```````.---ydmMNNNMMmdNmdNNNdmdhNdmNNNmmhdhhhhhhdNNdmmyso-------.``..-\n" +
-"```````.--+mmmMNNMMMNNNdmmNNhmhhmdmNNNmmhdhdmddhhhhyyyyss/------.``..-\n" +
-"```````.--ohddNNmNNmhyyymmNNhmhddddNmmdmhhhymdmmdddhdmmdddhyo+:-.``..-\n" +
-"```````.-:ossdNmdNNmhhhhdmmmhhhdhhdmmmddhmdhmdhmdddmddmNNmdyyyyo/``.--\n" +
-"```````.-osyyyhhhhhhyhhdydddhhNmhhdmmdmhmNNhmdhmddNdmmhdmNNmy/--.``.--\n" +
-"```````-+yhhhhyshhdhdmhdyddhhNMNdydmdddmNNNddmdmhhNmhdmdhyoyhdho:``.--\n" +
-".``````/hdddddymddmdmmhNhhmhmNNNmymddddNNyos//+yydNmhhhhhhs::::::``.-.\n" +
-"..``.:ydmmmdhhmmymmmNNhdddhyyoooyhdddNNMmh:-./ssydmyyhhdmmmho/::-.``:-\n" +
-"..-odNNNmmhhhmmhhmmdNNdy/sh::.`:odNmNMNMMMdsyyyhymhyssyhmmNNNNhs:-.``-\n" +
-"+ymmdmddhshhddhhhddymNms+mMdsyyyomNNNNNNNMMNhmNmydhhysyssddhddddhs/.`.\n" +
+        discord.sendMessage(
+"'''''''.---......''..-----:/+ssyyyyyss+/:-::-------:::----------.''...\n" +
+"'''''''.---......''..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.''...\n" +
+"'''''''.---......'-odNNNNmmmNNNNNNNNmmNNNmmdNNdNh//+/-----------.''...\n" +
+"'''''''.---...../yNNNNNdmNNNNNmNNNMMmNdNMNmhmMMNNNMmds----------.''...\n" +
+"'''''''.---...-smdmNdmmdNNNNNNmNMNNNmNNhmmmMmdNMMMNMNds---------.''...\n" +
+"'''''''.---.-/hNNdMMmmddNNNNmmdmNmNNmNNdhdhmNNNmNNmmNho+--------.''..-\n" +
+"'''''''.---ydmMNNNMMmdNmdNNNdmdhNdmNNNmmhdhhhhhhdNNdmmyso-------.''..-\n" +
+"'''''''.--+mmmMNNMMMNNNdmmNNhmhhmdmNNNmmhdhdmddhhhhyyyyss/------.''..-\n" +
+"'''''''.--ohddNNmNNmhyyymmNNhmhddddNmmdmhhhymdmmdddhdmmdddhyo+:-.''..-\n" +
+"'''''''.-:ossdNmdNNmhhhhdmmmhhhdhhdmmmddhmdhmdhmdddmddmNNmdyyyyo/''.--\n" +
+"'''''''.-osyyyhhhhhhyhhdydddhhNmhhdmmdmhmNNhmdhmddNdmmhdmNNmy/--.''.--\n" +
+"'''''''-+yhhhhyshhdhdmhdyddhhNMNdydmdddmNNNddmdmhhNmhdmdhyoyhdho:''.--\n" +
+".''''''/hdddddymddmdmmhNhhmhmNNNmymddddNNyos//+yydNmhhhhhhs::::::''.-.\n" +
+"..''.:ydmmmdhhmmymmmNNhdddhyyoooyhdddNNMmh:-./ssydmyyhhdmmmho/::-.'':-\n" +
+"..-odNNNmmhhhmmhhmmdNNdy/sh::.':odNmNMNMMMdsyyyhymhyssyhmmNNNNhs:-.''-\n" +
+"+ymmdmddhshhddhhhddymNms+mMdsyyyomNNNNNNNMMNhmNmydhhysyssddhddddhs/.'.\n" +
 "....sdho:+yyhhhhhhhyhmmyhdNNNdydNNNMNNNNNMMNNNNNshhhdoyysyyh+o+/-::-..\n" +
 "..-hy/--/hhddhhhyosyhhmhymNNNNNNNNNMMMNNMMMNNNNNohhdmyyyyys/o++/:./:-.\n" +
 "..:...-oddddhhdhsosshhhdhdNNNNNNNMMNNNNNNNMNNNNhsdhmNhhyyssoo+oo+:://-\n" +
@@ -153,7 +154,7 @@ public class App
 ".--:yNNmdysmNysyssssddmNhsohmNMMMMNNMMMMMNNmhsyohymNNdhmmdhhhhhhhyssos\n" +
 "--+yysoooshmooyy+os+mdmNdy+soshdmNMNNNNNNhyosdmyyhNNNdh+++++++++++++o+\n" +
 "-::::---./y-./yo.-o-hNmNNh//s+ooohhdddddysdsdNmoymNNmhd/--............\n" +
-"...```.../.../s...+oymNNNNs-+/:oodddmmmmyo+/:///dNmmdomo------..-:-...\n" +
+"...'''.../.../s...+oymNNNNs-+/:oodddmmmmyo+/:///dNmmdomo------..-:-...\n" +
 ".-----::-:::://::+yoyhmNNNm+/omhhdddddmmmdmm+++hmymm+/ys/////////////:\n" +
 "//:::::::/+++//+oho+dhhdNNNmsydddddmdmNNNmmdyshho+msoo+oso++++////////\n" +
 "h+:::::::/ymhoooydoomhohmmNNNdmmmmmmmmNNmmmmmmmmhoysso+ohh+++o////////\n" +
