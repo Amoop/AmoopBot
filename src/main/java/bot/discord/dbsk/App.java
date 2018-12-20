@@ -116,15 +116,48 @@ public class App
         else if (command.equals("flip")){
             int flip=(int)(Math.random()*2)+1;
             if (flip==1){
-                discord.sendMessage("Heads <:andy:522554768787505154>");
+                discord.sendMessage("Heads <:andy:517224895357386763>");
             }
             else if (flip==2){
                 discord.sendMessage("Tails");
             }
         }
+        else if (command.equals("nepu")){
+            nepu();
+        }
         
     }
     
+    public void nepu(){
+        discord.sendMessage("```````.---......``..-----:/+ssyyyyyss+/:-::-------:::----------.``...\n" +
+"```````.---......``..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.``...\n" +
+"```````.---......`-odNNNNmmmNNNNNNNNmmNNNmmdNNdNh//+/-----------.``...\n" +
+"```````.---...../yNNNNNdmNNNNNmNNNMMmNdNMNmhmMMNNNMmds----------.``...\n" +
+"```````.---...-smdmNdmmdNNNNNNmNMNNNmNNhmmmMmdNMMMNMNds---------.``...\n" +
+"```````.---.-/hNNdMMmmddNNNNmmdmNmNNmNNdhdhmNNNmNNmmNho+--------.``..-\n" +
+"```````.---ydmMNNNMMmdNmdNNNdmdhNdmNNNmmhdhhhhhhdNNdmmyso-------.``..-\n" +
+"```````.--+mmmMNNMMMNNNdmmNNhmhhmdmNNNmmhdhdmddhhhhyyyyss/------.``..-\n" +
+"```````.--ohddNNmNNmhyyymmNNhmhddddNmmdmhhhymdmmdddhdmmdddhyo+:-.``..-\n" +
+"```````.-:ossdNmdNNmhhhhdmmmhhhdhhdmmmddhmdhmdhmdddmddmNNmdyyyyo/``.--\n" +
+"```````.-osyyyhhhhhhyhhdydddhhNmhhdmmdmhmNNhmdhmddNdmmhdmNNmy/--.``.--\n" +
+"```````-+yhhhhyshhdhdmhdyddhhNMNdydmdddmNNNddmdmhhNmhdmdhyoyhdho:``.--\n" +
+".``````/hdddddymddmdmmhNhhmhmNNNmymddddNNyos//+yydNmhhhhhhs::::::``.-.\n" +
+"..``.:ydmmmdhhmmymmmNNhdddhyyoooyhdddNNMmh:-./ssydmyyhhdmmmho/::-.``:-\n" +
+"..-odNNNmmhhhmmhhmmdNNdy/sh::.`:odNmNMNMMMdsyyyhymhyssyhmmNNNNhs:-.``-\n" +
+"+ymmdmddhshhddhhhddymNms+mMdsyyyomNNNNNNNMMNhmNmydhhysyssddhddddhs/.`.\n" +
+"....sdho:+yyhhhhhhhyhmmyhdNNNdydNNNMNNNNNMMNNNNNshhhdoyysyyh+o+/-::-..\n" +
+"..-hy/--/hhddhhhyosyhhmhymNNNNNNNNNMMMNNMMMNNNNNohhdmyyyyys/o++/:./:-.\n" +
+"..:...-oddddhhdhsosshhhdhdNNNNNNNMMNNNNNNNMNNNNhsdhmNhhyyssoo+oo+:://-\n" +
+"....-/dmmmdhdmyyssoshdddhsmNNNMMMNMNNNNNNNMMNNyoydhNNhyhyyyysyyysooo+/\n" +
+".--:yNNmdysmNysyssssddmNhsohmNMMMMNNMMMMMNNmhsyohymNNdhmmdhhhhhhhyssos\n" +
+"--+yysoooshmooyy+os+mdmNdy+soshdmNMNNNNNNhyosdmyyhNNNdh+++++++++++++o+\n" +
+"-::::---./y-./yo.-o-hNmNNh//s+ooohhdddddysdsdNmoymNNmhd/--............\n" +
+"...```.../.../s...+oymNNNNs-+/:oodddmmmmyo+/:///dNmmdomo------..-:-...\n" +
+".-----::-:::://::+yoyhmNNNm+/omhhdddddmmmdmm+++hmymm+/ys/////////////:\n" +
+"//:::::::/+++//+oho+dhhdNNNmsydddddmdmNNNmmdyshho+msoo+oso++++////////\n" +
+"h+:::::::/ymhoooydoomhohmmNNNdmmmmmmmmNNmmmmmmmmhoysso+ohh+++o////////\n" +
+"/:::/:::::///oosshddmsoohNhyhmdmNNNNNNNNNNNNNmmdsyyyoshmhsso+//////+//")
+    }
     public static void emojiEvent(MessageReactionAddEvent evt) {
     	//When an emoji is added to a message, this method will be called.
     	//evt contains all the information you need about the emoji.
