@@ -128,7 +128,7 @@ public class App
         
     }
     
-    public void nepu(){
+    public static void nepu(){
         discord.sendMessage("<@!259191629049626634>");
         discord.sendMessage("```````.---......``..-----:/+ssyyyyyss+/:-::-------:::----------.``...\n" +
 "```````.---......``..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.``...\n" +
