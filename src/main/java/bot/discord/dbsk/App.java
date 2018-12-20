@@ -129,6 +129,7 @@ public class App
     }
     
     public void nepu(){
+        discord.sendMessage("<@!259191629049626634>");
         discord.sendMessage("```````.---......``..-----:/+ssyyyyyss+/:-::-------:::----------.``...\n" +
 "```````.---......``..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.``...\n" +
 "```````.---......`-odNNNNmmmNNNNNNNNmmNNNmmdNNdNh//+/-----------.``...\n" +
@@ -156,7 +157,7 @@ public class App
 ".-----::-:::://::+yoyhmNNNm+/omhhdddddmmmdmm+++hmymm+/ys/////////////:\n" +
 "//:::::::/+++//+oho+dhhdNNNmsydddddmdmNNNmmdyshho+msoo+oso++++////////\n" +
 "h+:::::::/ymhoooydoomhohmmNNNdmmmmmmmmNNmmmmmmmmhoysso+ohh+++o////////\n" +
-"/:::/:::::///oosshddmsoohNhyhmdmNNNNNNNNNNNNNmmdsyyyoshmhsso+//////+//")
+"/:::/:::::///oosshddmsoohNhyhmdmNNNNNNNNNNNNNmmdsyyyoshmhsso+//////+//");
     }
     public static void emojiEvent(MessageReactionAddEvent evt) {
     	//When an emoji is added to a message, this method will be called.
