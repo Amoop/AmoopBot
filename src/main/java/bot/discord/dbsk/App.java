@@ -55,32 +55,32 @@ public class App
         
         if (command.equals("repeat")){
             for (int i=0; i<5; i++){
-                discord.sendMessage("urmom");
+                discord.sendMessage("urmom",objMsgCh);
             }
         }
         else if (command.equals("mention")){
             for (int i=0; i<5; i++){
-                discord.sendMessage("<@!224675715612672001>");
+                discord.sendMessage("<@!224675715612672001>",objMsgCh);
             }
         }
         
         else if (command.equals("ping")){
-            discord.sendMessage("Pong");
+            discord.sendMessage("Pong",objMsgCh);
         }
         else if (command.equals("spongebob")){
             String output=("");
             for (int k=0; k<input.length(); k++){
                 output+=input.substring(k,k+1) + (" ");
-                discord.sendMessage(output);
+                discord.sendMessage(output,objMsgCh);
             }
         }
         else if (command.equals("isaaronbiggay")){
             int l=(int)(Math.random()*2)+1;
             if (l==1){
-                discord.sendMessage("yes he big gay");
+                discord.sendMessage("yes he big gay",objMsgCh);
             }
             else if (l==2){
-                discord.sendMessage("you rolled a 2 but he still big gay");
+                discord.sendMessage("you rolled a 2 but he still big gay",objMsgCh);
             }
         }
         else if (command.equals("news")){
@@ -91,12 +91,12 @@ public class App
             JsonObject News = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
             
             String url = News.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
-            discord.sendMessage(url);
+            discord.sendMessage(url,objMsgCh);
             
         }
         
         else if (command.equals("wumpus")){
-            discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png");
+            discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png",objMsgCh);
         }
         
         
@@ -116,20 +116,21 @@ public class App
         else if (command.equals("flip")){
             int flip=(int)(Math.random()*2)+1;
             if (flip==1){
-                discord.sendMessage("Heads <:andy:517224895357386763>");
+                discord.sendMessage("Heads <:andy:517224895357386763>",objMsgCh);
             }
             else if (flip==2){
-                discord.sendMessage("Tails");
+                discord.sendMessage("Tails",objMsgCh);
             }
         }
         else if (command.equals("nepu")){
-            nepu();
+            nepu(objMsgCh);
         }
+        
         
     }
     
-    public static void nepu(){
-        discord.sendMessage("<@!259191629049626634>");
+    public static void nepu(MessageChannel mc){
+        discord.sendMessage("<@!259191629049626634>",mc);
         discord.sendMessage(
 "`'''''''.---......''..-----:/+ssyyyyyss+/:-::-------:::----------.''...\n" +
 "'''''''.---......''..:oydNNmmmNNNNNmNNNNNdho:-//---::-----------.''...\n" +
@@ -158,7 +159,7 @@ public class App
 ".-----::-:::://::+yoyhmNNNm+/omhhdddddmmmdmm+++hmymm+/ys/////////////:\n" +
 "//:::::::/+++//+oho+dhhdNNNmsydddddmdmNNNmmdyshho+msoo+oso++++////////\n" +
 "h+:::::::/ymhoooydoomhohmmNNNdmmmmmmmmNNmmmmmmmmhoysso+ohh+++o////////\n" +
-"/:::/:::::///oosshddmsoohNhyhmdmNNNNNNNNNNNNNmmdsyyyoshmhsso+//////+//`");
+"/:::/:::::///oosshddmsoohNhyhmdmNNNNNNNNNNNNNmmdsyyyoshmhsso+//////+//`",mc);
     }
     public static void emojiEvent(MessageReactionAddEvent evt) {
     	//When an emoji is added to a message, this method will be called.
