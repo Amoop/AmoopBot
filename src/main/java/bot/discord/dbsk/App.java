@@ -136,7 +136,7 @@ public class App
             String json = "";
             try{
                 json = API.requestAPI("https://opentdb.com/api.php?amount=1&category=31&difficulty=easy&type=multiple");
-            }catch(Exception e){}
+            }catch(Exception e){e.printStackTrace();}
             System.out.println(json);
             JsonObject question = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
             
