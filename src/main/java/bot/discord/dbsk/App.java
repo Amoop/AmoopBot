@@ -143,7 +143,7 @@ public class App
             Gson gson = new Gson();
             Type arrayListType = new TypeToken<ArrayList<String>>() {}.getType();
             ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray().toString(), arrayListType);
-            String correctAnswer = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("correct_answer").getAsJsonString();
+            String correctAnswer = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("correct_answer").getAsString();
             answers.add(correctAnswer);
             Collections.shuffle(answers);
             discord.sendMessage(anime,"\n\n:regional_indicator_a:"+answers.get(0) + "\n:regional_indicator_b:"+ answers.get(1)+ "\n:regional_indicator_c:"+ answers.get(2) +"\n:regional_indicator_d: "+answers.get(3)+objMsgCh);
