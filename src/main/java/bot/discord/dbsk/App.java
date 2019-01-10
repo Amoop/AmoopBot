@@ -142,7 +142,7 @@ public class App
             String anime = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("question").getAsString();
             Gson gson = new Gson();
             Type arrayListType = new TypeToken<ArrayList<String>>() {}.getType();
-            ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray().getAsString(), arrayListType);
+            ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray().toString(), arrayListType);
             String correctAnswer = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("correct_answer").getAsJsonString();
             answers.add(correctAnswer);
             Collections.shuffle(answers);
