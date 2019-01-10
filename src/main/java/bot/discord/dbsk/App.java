@@ -20,7 +20,11 @@ public class App
 {
 	//Declare the variable discord, making it static so we can use it in other methods.
 	public static Discord discord;
-    public static void main( String[] args ){    	
+    public static void main( String[] args ){  
+
+    String certificatesTrustStorePath = "/etc/alternatives/jre/lib/security/cacerts";
+    System.setProperty("javax.net.ssl.trustStore", certificatesTrustStorePath);
+    System.setProperty("javax.net.ssl.trustStorePassword", "changeit");        
     	//Initialise the Discord Bot with your token.
     	discord = new Discord(Constants.TOKEN);
 		
