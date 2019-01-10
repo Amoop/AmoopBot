@@ -9,6 +9,11 @@ import net.dv8tion.jda.core.events.message.react.MessageReactionAddEvent;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+import com.google.gson.Gson;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class App 
 {
@@ -126,6 +131,25 @@ public class App
             nepu(objMsgCh);
         }
         
+        else if (command.equals("trivia")){
+            String json = "";
+            try{
+                json = API.requestAPI("https://opentdb.com/api.php?amount=1&category=31&difficulty=easy&type=multiple");
+            }catch(Exception e){}
+            JsonObject question = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
+            
+            String anime = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("question").getAsString();
+            Gson gson = new Gson();
+            Type arrayListType = new TypeToken<ArrayList<String>>();
+            ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray());
+            String correctAnswer = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("correct_answer").getAsJsonString();
+            answers.add(correctAnswer);
+            Collections.shuffle(answers);
+            discord.sendMessage(anime,"\n\n:regional_indicator_a:"+answers.get(0) + "\n:regional_indicator_b:"+ answers.get(1)+ "\n:regional_indicator_c:"+ answers.get(2) +"\n:regional_indicator_d: "+answers.get(3)+objMsgCh);
+        
+        } 
+                   
+            
         
     }
     
