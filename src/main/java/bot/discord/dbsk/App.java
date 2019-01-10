@@ -10,6 +10,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import com.google.gson.Gson;
+import com.google.common.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -140,8 +141,8 @@ public class App
             
             String anime = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("question").getAsString();
             Gson gson = new Gson();
-            Type arrayListType = new TypeToken<ArrayList<String>>();
-            ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray());
+            Type arrayListType = new TypeToken<ArrayList<String>>() {}.getType();
+            ArrayList<String> answers = gson.fromJson(question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("incorrect_answers").getAsJsonArray(), arrayListType);
             String correctAnswer = question.get("results").getAsJsonArray().get(0).getAsJsonObject().get("correct_answer").getAsJsonString();
             answers.add(correctAnswer);
             Collections.shuffle(answers);
