@@ -20,11 +20,7 @@ public class App
 {
 	//Declare the variable discord, making it static so we can use it in other methods.
 	public static Discord discord;
-    public static void main( String[] args ){  
-
-    String certificatesTrustStorePath = "/etc/alternatives/jre/lib/security/cacerts";
-    System.setProperty("javax.net.ssl.trustStore", certificatesTrustStorePath);
-    System.setProperty("javax.net.ssl.trustStorePassword", "changeit");        
+    public static void main( String[] args ){       
     	//Initialise the Discord Bot with your token.
     	discord = new Discord(Constants.TOKEN);
 		
@@ -93,17 +89,7 @@ public class App
                 discord.sendMessage("you rolled a 2 but he still big gay",objMsgCh);
             }
         }
-        else if (command.equals("news")){
-            String json = "";
-            try{
-                json = API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=d84cd61388cb4e949872d398e65fe20a");
-            }catch(Exception e){}
-            JsonObject News = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
-            
-            String url = News.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
-            discord.sendMessage(url,objMsgCh);
-            
-        }
+        
         
         else if (command.equals("wumpus")){
             discord.sendMessage("https://github.com/Amoop/AmoopBot/raw/master/wumpus.png",objMsgCh);
@@ -135,7 +121,17 @@ public class App
         else if (command.equals("nepu")){
             nepu(objMsgCh);
         }
-        
+        else if (command.equals("news")){
+            String json = "";
+            try{
+                json = API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=d84cd61388cb4e949872d398e65fe20a");
+            }catch(Exception e){}
+            JsonObject News = (JsonObject)(new JsonParser().parse(json).getAsJsonObject());
+            
+            String url = News.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+            discord.sendMessage(url,objMsgCh);
+            
+        }
         else if (command.equals("trivia")){
             String json = "";
             try{
