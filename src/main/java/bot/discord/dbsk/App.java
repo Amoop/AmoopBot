@@ -135,7 +135,7 @@ public class App
         else if (command.equals("trivia")){
             String json = "";
             try{
-                json = API.requestAPI("https://opentdb.com/api.php?amount=1&category=31&difficulty=easy&type=multiple");
+                json = API.requestAPI("https://opentdb.com/api.php?amount=1&category=31&type=multiple");
             }catch(Exception e){e.printStackTrace();}
             System.out.println(json);
             json = "{\"response_code\":0,\"results\":[{\"category\":\"Entertainment: Japanese Anime & Manga\",\"type\":\"multiple\",\"difficulty\":\"easy\",\"question\":\"In the anime Black Butler, who is betrothed to be married to Ciel Phantomhive?\",\"correct_answer\":\"Elizabeth Midford\",\"incorrect_answers\":[\"Rachel Phantomhive\",\"Alexis Leon Midford\",\"Angelina Dalles\"]}]}";
