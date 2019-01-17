@@ -30,7 +30,15 @@ public class API {
 		String body = "";
 		URL url = new URL(URL);
 		URLConnection con = url.openConnection();
-		InputStream in = con.getInputStream();
+		try{
+                    InputStream in = con.getInputStream();
+                }catch(Exception e){
+                    InputStream error = con.getErrorStream();
+                    String encoding = con.getContentEncoding();
+                    encoding = encoding == null ? "UTF-8" : encoding;
+                    body = IOUtils.toString(error, encoding);
+                    return body;
+                }
 		String encoding = con.getContentEncoding();
 		encoding = encoding == null ? "UTF-8" : encoding;
 		body = IOUtils.toString(in, encoding);
