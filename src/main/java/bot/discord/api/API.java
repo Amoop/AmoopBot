@@ -30,15 +30,8 @@ public class API {
 		String body = "";
 		URL url = new URL(URL);
 		URLConnection con = url.openConnection();
-		try{
-                    InputStream in = con.getInputStream();
-                }catch(Exception e){
-                    InputStream error = con.getErrorStream();
-                    String encoding = con.getContentEncoding();
-                    encoding = encoding == null ? "UTF-8" : encoding;
-                    body = IOUtils.toString(error, encoding);
-                    return body;
-                }
+                con.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+		InputStream in = con.getInputStream();
 		String encoding = con.getContentEncoding();
 		encoding = encoding == null ? "UTF-8" : encoding;
 		body = IOUtils.toString(in, encoding);
